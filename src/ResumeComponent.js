@@ -21,6 +21,12 @@ function ResumeComponent(props) {
       {props.experiences.map(experience => (
         <ExperienceComponent key={experience.company} experience={experience} />
       ))}
+      <footer style ={{right:0, botton: 0, textAlign: "right", fontSize: 12}}>
+      <p>
+        Made with React, Flask & SqlAlchemy. Hosted in GCP <br />
+        https://github.com/josesolaro/Cvitae
+      </p>
+      </footer>
     </>
   );
 }

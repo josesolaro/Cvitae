@@ -23,12 +23,12 @@ def load_data():
 
     endava_description = "Working as a developer for abroad clients.<br>" \
                          "<ul>" \
-                         "<li>Develop a micro-service application for use as a base in projects. Using multiple " \
+                         "<li>Development of a micro-service application for use as a base in projects. Using multiple " \
                          "technologies this application was made to be use for improve development of any project, by "\
                          "solving some base problems in software development." \
                          "<ul><li>Python 3.6 <li>Flask <li>.Net Core 2.2 <li>RabbitMq <li>CouchDB" \
                          "<li>Docker </ul>"\
-                         "<li>Develop a desktop application for creating reports from measurements made by a robot." \
+                         "<li>Development of a desktop application for creating reports from measurements made by a robot." \
                          "<ul><li>.Net 4.7 <li>SqlServer <li>WPF </ul>" \
                          "</ul>"
 
@@ -37,11 +37,7 @@ def load_data():
                   Experience(job="Developer", job_from=date(2019, 5, 20), job_to=None,
                              company='Endava', description=endava_description)]
 
-    profile_description = "Result oriented and fast learner developer used to work with small and large teams and " \
-                          "different languages and technologies.<br>" \
-                          "Easy going, responsable and positive feedback receiver, " \
-                          "trying to improve professionally with "\
-                          "each opportunity."
+    profile_description = "<ul><li>Result oriented <li>Adaptable <li>Team player </ul>"
 
     profile = Profile(name="Jose Miguel Solaro",
                       job="Developer", phone='+54 343 464391',
