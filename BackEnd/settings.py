@@ -9,7 +9,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 
-from model import education, experience, profile
+from model import education, experience, profile, knowledge
 
 with app.app_context():
     db.create_all()

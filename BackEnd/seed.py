@@ -2,9 +2,16 @@ from settings import db
 from model.profile import Profile
 from model.experience import Experience
 from model.education import Education
+from model.knowledge import Knowledge
 from datetime import date
 
 def load_data():
+    knowledge = [Knowledge(description="English"), Knowledge(description="Scrum"), Knowledge(description="CI/CD"),
+                 Knowledge(description="Embedded Systems"),
+                 Knowledge(description="React"),
+                 Knowledge(description="Artificial Intelligence & Data Science with Keras and TensorFlow"),
+                 Knowledge(description="Kubernetes")]
+
     education = [Education(degree="Bachelor of Commerce", institute="Instituto Santa Maria del Rosario",
                            finish_year=date(2008, 12, 1)),
                  Education(degree="Electronic Engineer", institute="Universidad Tecnologica Nacional",
@@ -37,15 +44,17 @@ def load_data():
                   Experience(job="Developer", job_from=date(2019, 5, 20), job_to=None,
                              company='Endava', description=endava_description)]
 
-    profile_description = "<ul><li>Result oriented <li>Adaptable <li>Team player </ul>"
+    profile_description = "Result oriented and fast learner developer used to work with small and large teams and different languages and technologies. Easy going, responsable and positive feedback receiver, trying to improve professionally with each opportunity."
 
     profile = Profile(name="Jose Miguel Solaro",
                       job="Developer", phone='+54 343 464391',
                       email='josesolaro@gmail.com', linkedin='linkedin/jose-solaro',
+                      github="https://github.com/josesolaro",
                       location='Pna, Entre Rios, Argentina',
                       profile_description=profile_description,
                       education=education,
-                      experience=experience)
+                      experience=experience,
+                      knowledge=knowledge)
 
     db.session.add(profile)
     db.session.commit()
