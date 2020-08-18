@@ -11,30 +11,32 @@ function MainComponent(props) {
   const [experiences, setExperiences] = useState([]);
   const [personal, setPersonal] = useState({});
   const [profile, setProfile] = useState(null);
+  const [knowledge, setKnowledge] = useState([]);
 
   useEffect(() => {
-    axios.get(apiUrl).then(resp => parseData(resp.data));
+    axios.get(apiUrl).then((resp) => parseData(resp.data));
   }, []);
 
-  const parseData = data => {
+  const parseData = (data) => {
     setContact([
       { key: "phone", value: data.phone },
       { key: "email", value: data.email },
       { key: "linkedin", value: data.linkedin },
-      { key: "location", value: data.location }
+      { key: "github", value: data.github },
+      { key: "location", value: data.location },
     ]);
 
-    const dataEducation = data.education.map(education => {
+    const dataEducation = data.education.map((education) => {
       return {
         institute: education.institute,
         finishYear: new Date(education.finish_year).getUTCFullYear(),
-        degree: education.degree
+        degree: education.degree,
       };
     });
     dataEducation.sort((a, b) => (a.finishYear > b.finishYear ? -1 : 0));
     setEducation(dataEducation);
 
-    const dataExperience = data.experience.map(experience => {
+    const dataExperience = data.experience.map((experience) => {
       return {
         company: experience.company,
         from: new Date(experience.job_from).getFullYear(),
@@ -42,11 +44,14 @@ function MainComponent(props) {
         to: experience.job_to
           ? new Date(experience.job_to).getFullYear()
           : "Currently",
-        description: experience.description
+        description: experience.description,
       };
     });
     dataExperience.sort((a, b) => (a.from > b.from ? -1 : 0));
     setExperiences(dataExperience);
+
+    const dataKnowledge = data.knowledge;
+    setKnowledge(dataKnowledge);
 
     setPersonal({ name: data.name, job: data.job });
     setProfile(data.profile_description);
@@ -59,7 +64,11 @@ function MainComponent(props) {
           <CvComponent contact={contact} education={education} />
         </div>
         <div className="resumenComponent">
-          <ResumeComponent experiences={experiences} profile={profile} />
+          <ResumeComponent
+            experiences={experiences}
+            profile={profile}
+            knowledge={knowledge}
+          />
         </div>
       </div>
     </>
