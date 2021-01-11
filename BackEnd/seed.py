@@ -22,27 +22,33 @@ def load_data():
                             "and several automatic processes that contribute to the service provided. " \
                             "Mainly working as a backend developer and maintaining web and database servers.<br>" \
                             "Work with: <br>" \
-                            "<ul>" \
+                            "<ul style='columns: 3;'>" \
                             "<li> PHP 5.6 <li>Phalcon Framework <li>Zend Framework <li>PostgreSql 9.6"\
                             "<li>.Net 4.7 (C#) <li>Nginx <li>Apache Http Server <li>Centos " \
                             "<li>Windows Form <li>Angular 5"\
                             "</ul>"
 
-    endava_description = "Working as a developer for abroad clients.<br>" \
+    endava_description = "Worked as a developer for abroad clients.<br>" \
                          "<ul>" \
                          "<li>Development of a micro-service application for use as a base in projects. Using multiple " \
                          "technologies this application was made to be use for improve development of any project, by "\
                          "solving some base problems in software development." \
-                         "<ul><li>Python 3.6 <li>Flask <li>.Net Core 2.2 <li>RabbitMq <li>CouchDB" \
+                         "<ul style='columns: 3;'><li>Python 3.6 <li>Flask <li>.Net Core 2.2 <li>RabbitMq <li>CouchDB" \
                          "<li>Docker </ul>"\
                          "<li>Development of a desktop application for creating reports from measurements made by a robot." \
                          "<ul><li>.Net 4.7 <li>SqlServer <li>WPF </ul>" \
                          "</ul>"
 
+    meli_description = "Currently working with the company's operations teams developing differents projects for providing better fintech services<br>"\
+                       "<ul>"\
+                       "<li>Golang <li>MySql <li>Microservices Architecture" 
+
     experience = [Experience(job="Developer-System support", job_from=date(2016, 12, 19), job_to=date(2019, 5, 17),
                              company='Securitas Trailback', description=trailback_description),
-                  Experience(job="Developer", job_from=date(2019, 5, 20), job_to=None,
-                             company='Endava', description=endava_description)]
+                  Experience(job="Developer", job_from=date(2019, 5, 20), job_to=date(2020, 9, 21),
+                             company='Endava', description=endava_description),
+                  Experience(job="Developer", job_from=date(2020, 9, 21), job_to=None,
+                             company='MercadoLibre', description=meli_description)]
 
     profile_description = "Result oriented and fast learner developer used to work with small and large teams and different languages and technologies. Easy going, responsable and positive feedback receiver, trying to improve professionally with each opportunity."
 
