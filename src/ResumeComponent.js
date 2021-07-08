@@ -22,11 +22,11 @@ function ResumeComponent(props) {
       {props.experiences.map((experience) => (
         <ExperienceComponent key={experience.company} experience={experience} />
       ))}
-      <div>
+      {/*<div>
         <h3>Other Knowledge</h3>
         <hr style={style.hr} />
       </div>
-      <KnowledgeComponent knowledge={props.knowledge} />
+      <KnowledgeComponent knowledge={props.knowledge} />*/}
     </>
   );
 }

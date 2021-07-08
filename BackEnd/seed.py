@@ -39,16 +39,22 @@ def load_data():
                          "<ul><li>.Net 4.7 <li>SqlServer <li>WPF </ul>" \
                          "</ul>"
 
-    meli_description = "Currently working with the company's operations teams developing differents projects for providing better fintech services<br>"\
+    meli_description = "Worked with the company's operations teams developing differents tools for providing better fintech services<br>"\
                        "<ul>"\
-                       "<li>Golang <li>MySql <li>Microservices Architecture" 
+                       "<li>Golang <li>MySql <li>Microservices Architecture"
 
+    argeniss_description = "Currently working for a Cryptocurrency exchange, integrating new currency technologies, "\
+                           "developing new features for the exchange's web and new casino games" \
+                           "<ul><li>.Net Framework 4.8 <li>Sql Server <li>Redis </ul>"
+                           
     experience = [Experience(job="Developer-System support", job_from=date(2016, 12, 19), job_to=date(2019, 5, 17),
                              company='Securitas Trailback', description=trailback_description),
                   Experience(job="Developer", job_from=date(2019, 5, 20), job_to=date(2020, 9, 21),
                              company='Endava', description=endava_description),
-                  Experience(job="Developer", job_from=date(2020, 9, 21), job_to=None,
-                             company='MercadoLibre', description=meli_description)]
+                  Experience(job="Backend Developer", job_from=date(2020, 9, 21), job_to=date(2021, 2,3),
+                             company='MercadoLibre', description=meli_description),
+                  Experience(job="Backend Developer", job_from=date(2021, 2, 8), job_to=None,
+                             company='Argeniss Software', description=argeniss_description)]
 
     profile_description = "Result oriented and fast learner developer used to work with small and large teams and different languages and technologies. Easy going, responsable and positive feedback receiver, trying to improve professionally with each opportunity."
 

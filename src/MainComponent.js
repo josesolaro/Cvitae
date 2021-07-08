@@ -39,10 +39,10 @@ function MainComponent(props) {
     const dataExperience = data.experience.map((experience) => {
       return {
         company: experience.company,
-        from: new Date(experience.job_from).getFullYear(),
+        from: `${new Date(experience.job_from).getFullYear()}`+"-"+`${new Date(experience.job_from).getMonth()+1}`.padStart(2, '0'),
         position: experience.job,
         to: experience.job_to
-          ? new Date(experience.job_to).getFullYear()
+          ? `${new Date(experience.job_to).getFullYear()}`+"-"+`${new Date(experience.job_to).getMonth()+1}`.padStart(2, '0')
           : "Currently",
         description: experience.description,
       };
