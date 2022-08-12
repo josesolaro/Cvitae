@@ -59,8 +59,8 @@ def load_data():
     profile_description = "Result oriented and fast learner developer used to work with small and large teams and different languages and technologies. Easy going, responsable and positive feedback receiver, trying to improve professionally with each opportunity."
 
     profile = Profile(name="Jose Miguel Solaro",
-                      job="Developer", phone='+54 343 464391',
-                      email='josesolaro@gmail.com', linkedin='linkedin/jose-solaro',
+                      job="Developer", phone='+54 343 4646391',
+                      email='josesolaro@gmail.com', linkedin='https://www.linkedin.com/in/jose-solaro-997350107',
                       github="https://github.com/josesolaro",
                       location='Pna, Entre Rios, Argentina',
                       profile_description=profile_description,
