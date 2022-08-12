@@ -45,7 +45,7 @@ def load_data():
 
     argeniss_description = "Currently working for a Cryptocurrency exchange, integrating new currency technologies, "\
                            "developing new features for the exchange's web and new casino games" \
-                           "<ul><li>.Net Framework 4.8 <li>Sql Server <li>Redis </ul>"
+                           "<ul style='columns: 3;'><li>.Net Framework 4.8 <li>.Net 6 <li>Entity Framework <li>Sql Server <li>Redis <li>AWS </ul>"
                            
     experience = [Experience(job="Developer-System support", job_from=date(2016, 12, 19), job_to=date(2019, 5, 17),
                              company='Securitas Trailback', description=trailback_description),
