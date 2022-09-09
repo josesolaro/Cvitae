@@ -12,9 +12,7 @@ def load_data():
                  Knowledge(description="Artificial Intelligence & Data Science with Keras and TensorFlow"),
                  Knowledge(description="Kubernetes")]
 
-    education = [Education(degree="Bachelor of Commerce", institute="Instituto Santa Maria del Rosario",
-                           finish_year=date(2008, 12, 1)),
-                 Education(degree="Electronic Engineer", institute="Universidad Tecnologica Nacional",
+    education = [Education(degree="Electronic Engineer", institute="Universidad Tecnologica Nacional",
                            finish_year=date(2016, 11, 1))]
 
     trailback_description = "Worked as a developer and system support in a geo-localization service, developing " \
@@ -25,7 +23,7 @@ def load_data():
                             "<ul style='columns: 3;'>" \
                             "<li> PHP 5.6 <li>Phalcon Framework <li>Zend Framework <li>PostgreSql 9.6"\
                             "<li>.Net 4.7 (C#) <li>Nginx <li>Apache Http Server <li>Centos " \
-                            "<li>Windows Form <li>Angular 5"\
+                            "<li>Angular 5"\
                             "</ul>"
 
     endava_description = "Worked as a developer for abroad clients.<br>" \
